@@ -39,7 +39,6 @@ public class Point3d {
     }
 
     public boolean equals(Point3d point3d) {
-
         if (this.xCoord == point3d.xCoord) {
             if (this.yCoord == point3d.yCoord) {
                 if (this.zCoord == point3d.zCoord) {
