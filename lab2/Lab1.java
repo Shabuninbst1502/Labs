@@ -45,9 +45,9 @@ public class Lab1 {
 
 	public static double computeArea(Point3d firstPoint, Point3d secondPoint, Point3d thridPoint) {
 		return Math.sqrt(
-			(firstPoint.getX() + secondPoint.getX() + thridPoint.getX()) * 
-			(- firstPoint.getX() + secondPoint.getX() + thridPoint.getX()) * 
-			(firstPoint.getX() - secondPoint.getX() + thridPoint.getX()) * 
-			(firstPoint.getX() + secondPoint.getX() - thridPoint.getX())) / 4;
+			(firstPoint.distanceTo(secondPoint) + secondPoint.distanceTo(thridPoint) + thridPoint.distanceTo(firstPoint)) * 
+			(- firstPoint.distanceTo(secondPoint) + secondPoint.distanceTo(thridPoint) + thridPoint.distanceTo(firstPoint)) * 
+			(firstPoint.distanceTo(secondPoint) - secondPoint.distanceTo(thridPoint) + thridPoint.distanceTo(firstPoint)) * 
+			(firstPoint.distanceTo(secondPoint) + secondPoint.distanceTo(thridPoint) - thridPoint.distanceTo(firstPoint))) / 4;
 	}
 } 
